@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header classs="app-header">
+        <h1 class="text-center text-white bg-dark p-2">Weather App</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row h-100">
+            <div class="col-lg-4 d-flex flex-column">
+                <header class="mt-5">
+                    <h2 class="text-center">Search</h2>
+                    <form id="search-form" class="mt-4">
+                        <div class="input-group">
+                            <input type="text" id="city-input" class="form-control" placeholder="Enter a city">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>                    
+                </header>
+
+                <main class="flex-grow-1">
+                    <section id="search-history" class="mt-5">
+                        <h2 class="card bg-dark text-center text-white">Search History</h2>
+                        <ul id="search-history-list"></ul>
+                    </section>
+                </main>
+            </div>
+
+            <div class="col-lg-8 d-flex flex-column h-25">
+                <section id="current-weather" class="mt-5 flex-grow-1">
+                    <h2 class="text-center">Current Weather</h2>
+                    <div id="city-info" class="card"></div>
+                </section>
+
+                <section id="forecast" class="mt-5 flex-grow-1">
+                    <h2 class="text-center">5-Day Forecast</h2>
+                    <div id="forecast-info" class="card-deck"></div>
+                </section>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
